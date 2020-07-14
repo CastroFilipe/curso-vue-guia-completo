@@ -1,0 +1,25 @@
+<!--Aula: Acessando Dados na Instância VueJS -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<div id="app">
+    {{mensagem}}
+    <br/>
+    {{saudacao()}}
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data:{
+            mensagem: 'Olá vue'
+        },
+        methods: {
+            saudacao(){
+                console.log(this)
+                return this.mensagem
+            }
+        }
+    })
+</script>
