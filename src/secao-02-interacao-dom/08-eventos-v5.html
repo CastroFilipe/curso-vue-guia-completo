@@ -1,0 +1,29 @@
+<!--Aula: Eventos de teclado -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<div id="app">
+    <p>Alerta para qualquer letra digitada (keyup)</p>
+    <input type="text" v-on:keyup="exibirAlerta">
+    <hr>
+
+    <p>Alerta somente após apertar enter (keyup.enter)</p>
+    <input type="text" v-on:keyup.enter="exibirAlerta">
+    <hr>
+
+    <p>Alerta somente após apertar enter + alt (keyup.enter.alt)</p>
+    <input type="text" v-on:keyup.enter.alt="exibirAlerta">
+    <hr>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        methods: {
+           exibirAlerta(){
+               alert('Alerta')
+           }
+        }
+    })
+</script>

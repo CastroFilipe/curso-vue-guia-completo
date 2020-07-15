@@ -1,0 +1,40 @@
+<!--Aula: Modificadores de eventos -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<div id="app">
+    <p>{{contador}}</p>
+    <button v-on:click="incrementar(5, $event)">+1</button>
+    <p v-on:mousemove="atualizarPosicoesXY">
+        Mouse {{x}} {{y}}
+        <span v-on:mousemove="parar"> #PARAR AQUI COM A FUNÇÃO PARAR!# </span>
+        ou
+        <span v-on:mousemove.stop=""> #PARAR COM MODIFICADOR STOP# </span>
+    </p>
+    <a v-on:click.prevent href="http://www.google.com">Google</a>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data:{
+            contador: 0,
+            x: 0,
+            y: 0
+        },
+        methods: {
+            incrementar(passo, event){
+                console.log(passo, event)
+                this.contador += passo
+            },
+            atualizarPosicoesXY(event){
+                this.x = event.clientX
+                this.y = event.clientY
+            },
+            parar(event){
+                event.stopPropagation()
+            }
+        }
+    })
+</script>
