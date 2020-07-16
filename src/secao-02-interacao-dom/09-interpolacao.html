@@ -1,0 +1,28 @@
+<!--Aula: Código javascript no template -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<div id="app">
+    <!-- Expressões interpoladas-->
+    <p>contador: {{contador}}</p>
+    <p>contador*2: {{contador * 2}}</p>
+    <p>{{ contador > 10 ? 'contador maior que 10' : 'contador menor que 10'}}</p>
+    <p>soma maluca: {{-10 * contador + (2* (20 + 100) - 30)/2}}</p>
+
+    <button v-on:click="incrementar">+1</button>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            contador: 0
+        },
+        methods: {
+            incrementar(){
+                this.contador++
+            }
+        }
+    })
+</script>

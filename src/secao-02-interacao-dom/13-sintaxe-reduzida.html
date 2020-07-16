@@ -1,0 +1,32 @@
+<!--Aula: Sintaxe reduzida(Shorthands) -->
+<script src="https://unpkg.com/vue"></script>
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<div id="app">
+    <!-- Sem sintaxe reduzida -->
+    <p>{{contador}}</p>
+    <button v-on:click="incrementar">+1</button><br>
+    <input type="text" v-bind:value="contador">
+    <br><hr>
+
+    <!-- com sintaxe reduzida -->
+    <p>{{contador}}</p>
+    <button @click="incrementar">+1</button><br>
+    <input type="text" :value="contador">
+
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            contador: 0
+        },
+        methods: {
+            incrementar() {
+                this.contador++
+            }
+        }
+    })
+</script>

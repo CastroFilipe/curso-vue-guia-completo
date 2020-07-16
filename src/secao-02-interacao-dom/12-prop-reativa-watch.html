@@ -1,0 +1,45 @@
+<!--Aula: Monitorando mudanças -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<div id="app">
+    <button v-on:click="incrementarNumero">Aumentar número</button>
+    <button v-on:click="diminuirNumero">Diminuir número</button>
+    <p>Número: {{numero}}</p>
+    <p>Resultado computed: {{resultadoNumeroComp}}</p>
+
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data:{
+            numero: 0
+        },
+        watch: {
+            //monitora mudanças no atributo numero e pode tratar a mudança de forma assincrona.
+            numero(novo, antigo){
+                console.log("antigo: "+antigo+ "| novo: " +novo)
+                setTimeout(time =>{
+                    console.log('watch: Mensagem assincrona enviada após 3 segundos')
+                }, 3000)
+            }
+        },
+        computed: {
+            resultadoNumeroComp(){
+                console.log('Função computed resultadoNumeroComp() foi chamada pois realmente houve mudança no valor do numero.')
+                console.log('Computed é processado de forma sincrona.')
+                return this.numero < 5 ? 'o número 1 é menor que 5' : 'o número 1 é maior que 5'
+            }
+        },
+        methods: {
+            incrementarNumero(){
+                this.numero++
+            },
+            diminuirNumero(){
+                this.numero--;
+            }
+        }
+    })
+</script>
