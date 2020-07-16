@@ -1,0 +1,55 @@
+<!--Aula: Estilo dinâmico e classes css #02 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<style>
+    #caixa {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .demo {
+        width: 100px;
+        height: 100px;
+        background-color: gray;
+    }
+
+    .cor-1 {
+        background-color: blue;
+    }
+
+    .c2 {
+        background-color: brown;
+        height: 200px;
+    }
+
+    .c3 {
+        background-color: green;
+    }
+</style>
+
+<div id="app">
+    <div id="caixa">
+        <!-- Aplicando estilo mais complexo através de propriedade computada -->
+        <div class="demo" :class="estilo1" @click="aplicar = !aplicar"></div>
+        <div class="demo" :class="{c2 : aplicar}"></div>
+        <div class="demo" :class="{c3 : !aplicar}"></div>
+    </div>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            aplicar: false
+        },
+        computed: {
+            estilo1(){
+                return {
+                    c3: this.aplicar,
+                    c2: !this.aplicar,
+                }
+            }
+        }
+    })
+</script>
