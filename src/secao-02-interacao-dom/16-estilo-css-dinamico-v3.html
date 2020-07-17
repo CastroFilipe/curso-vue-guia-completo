@@ -1,4 +1,4 @@
-<!--Aula: Estilo dinâmico e classes css #02 -->
+<!--Aula: Estilo dinâmico e classes css #03 -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
@@ -26,22 +26,30 @@
     .c3 {
         background-color: green;
     }
+
+    .girar{
+        transform: rotate(45deg);
+    }
 </style>
 
 <div id="app">
     <div id="caixa">
-        <!-- Aplicando estilo mais complexo através de propriedade computada -->
         <div class="demo" :class="estilo1" @click="aplicar = !aplicar"></div>
         <div class="demo" :class="{c2 : aplicar}"></div>
         <div class="demo" :class="{c3 : !aplicar}"></div>
+        <div class="demo" :class="classeCss"></div>
+        <div class="demo" :class="[classeCss, 'girar']"></div><!-- Aplicando mais de uma classe. Use sintaxe de array[ ]-->
     </div>
+    <br><hr>
+    <input type="text" v-model:value="classeCss">
 </div>
 
 <script>
     new Vue({
         el: '#app',
         data: {
-            aplicar: false
+            aplicar: false,
+            classeCss: 'cor-1'
         },
         computed: {
             estilo1(){

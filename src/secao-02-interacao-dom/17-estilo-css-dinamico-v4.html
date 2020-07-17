@@ -1,0 +1,50 @@
+<!--Aula: Estilo dinâmico sem classe-->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<style>
+    #caixa {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .demo {
+        width: 100px;
+        height: 100px;
+        background-color: gray;
+    }
+
+</style>
+
+<div id="app">
+    <div id="caixa">
+        <div class="demo" :style="[{'background-color': 'red', width: largura}]"></div>
+        <div class="demo" :style="{backgroundColor: cor}"></div><!--Tbm aceita o estilo camelCase-->
+        <div class="demo" :style="estiloPersonalizado"></div>
+    </div>
+    <br><hr>
+    <p>Cor, Largura e borda</p>
+    <input type="text" v-model:value="cor">
+    <input type="text" v-model:value="largura">
+    <input type="text" v-model="borda">
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            cor: 'green',
+            largura: 200,
+            borda: '5px solid brown'
+        },
+        computed: {
+            estiloPersonalizado(){
+                return {
+                    backgroundColor : this.cor,
+                    width: `${this.largura}px`,
+                    border: this.borda
+                }
+            }
+        }
+    })
+</script>
