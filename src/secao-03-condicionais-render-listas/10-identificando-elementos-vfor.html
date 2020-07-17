@@ -1,0 +1,31 @@
+<!--Aula: Identificando os elementos no v-for -->
+<meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <!-- :key indica algum atributo útil para identificar de forma unica o objeto.
+    Isso ajudará o vue a renderizar, numa lista, apenas os itens que sofrerem mudanças.
+    Nesse exemplo, a :key="cor" utiliza o próprio nome da cor como chave, porém em objetos
+    poderia ser utilizado o id ou outro atributo unico -->
+    <ul>
+        <li v-for="(cor, i) in cores" :key="cor">{{ i + 1 }}) {{ cor }}</li>
+    </ul>
+    <input type="text" v-model="novaCor">
+    <button @click="cores.push(novaCor)">Adicionar cor</button>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            cores:['verde', 'vermelho', 'amarelo', 'azul', 'branco', 'preto'],
+            novaCor: ''
+        }
+    })
+</script>
+
+<style>
+    li {
+        list-style: none;
+    }
+</style>

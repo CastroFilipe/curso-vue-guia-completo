@@ -1,0 +1,27 @@
+<!--Aula: Seleção múltipla com v-else-if -->
+<meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <p v-if="logado && !anonimo">Usuário logado: Filipe</p>
+    <p v-else-if="logado && anonimo">Navegando como anonimo</p>
+    <p v-else>Usuário não logado</p>
+    <button @click="login">{{logado ? 'Sair' : 'Entrar'}}</button>
+    <input type="checkbox" v-model="anonimo"> Navegar Como Anônimo
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            logado: false,
+            anonimo: true
+        },
+        methods: {
+            login(){
+                this.logado = this.logado == true ? false : true
+            }
+        }
+    })
+
+</script>

@@ -1,0 +1,37 @@
+<!--Aula: esconda o elemento com v-show -->
+<meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <!-- O v-show apenas esconde os elementos através da propriedade display:none do css -->
+    <p v-show="!logado">Por favor faça o Login</p>
+    <p v-show="logado">Seja bem vindo!</p>
+
+    <!-- O v-if remove o elemento, diferente do v-show que apenas esconde via css -->
+    <template v-if="logado && !anonimo">
+        <p>Usuário Logado: {{nome}}</p>
+        <p>Perfil: Administrator</p>
+    </template>
+
+    <p v-else-if="logado && anonimo">Navegando como anonimo</p>
+    <p v-else>Usuário não logado</p>
+    <button @click="login">{{logado ? 'Sair' : 'Entrar'}}</button>
+    <input type="checkbox" v-model="anonimo"> Navegar Como Anônimo
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            nome: 'Filipe',
+            logado: false,
+            anonimo: true
+        },
+        methods: {
+            login(){
+                this.logado = this.logado == true ? false : true
+            }
+        }
+    })
+
+</script>

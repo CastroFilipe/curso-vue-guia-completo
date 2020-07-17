@@ -1,0 +1,42 @@
+<!--Aula: Iterando em Objetos -->
+<meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <ul>
+        <li v-for="pessoa in pessoas">{{ pessoa.nome }} {{pessoa.idade}}</li>
+    </ul>
+    <hr>
+    <ul>
+        <li v-for="(pessoa, i) in pessoas">{{i}}) {{ pessoa.nome }}</li>
+    </ul>
+    <hr>
+    <ul>
+        <li v-for="(pessoa, i) in pessoas"><!-- percorre por cada pessoa na lista-->
+            {{i}})
+            <span v-for="(atributo, chave, indice) in pessoa"><!-- percorre por cada atributo de uma pessoa-->
+                 {{indice}} {{chave}}: {{ atributo }} || 
+            </span>
+        </li>
+    </ul>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            pessoas:[
+                {nome: 'Paulo', idade: 24, peso: 79},
+                {nome: 'Pedro', idade: 27, peso: 71},
+                {nome: 'Patricia', idade: 31, peso: 89},
+                {nome: 'Julia', idade: 19, peso: 74},
+            ]
+        }
+    })
+</script>
+
+<style>
+    li {
+        list-style: none;
+    }
+</style>
