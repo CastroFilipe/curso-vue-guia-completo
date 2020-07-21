@@ -1,0 +1,65 @@
+<table>
+    <caption>Tabela de produtos</caption> <!--Descrição-->
+    <thead>
+        <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Curso completo de web</td>
+            <td>R$ 2.500,00</td>
+            <td class="centralizado">3</td>
+            <td>R$ 7.500,00</td>
+        </tr>
+        <tr>
+            <td>Curso de VUEjs</td>
+            <td>R$ 1.500,00</td>
+            <td class="centralizado">2</td>
+            <td>R$ 3.000,00</td>
+        </tr>
+        <tr>
+            <td>Curso de Banco de dados</td>
+            <td>R$ 3.000,00</td>
+            <td class="centralizado">1</td>
+            <td>R$ 3.000,00</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">Total</td>
+            <td>13.500,00</td>
+        </tr>
+    </tfoot>
+</table>
+
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    thead tr {
+        border-bottom: solid 3px #444;
+    }
+
+    .centralizado {
+        text-align: center;
+    }
+
+    tbody tr:hover {
+        background-color: beige;
+    }
+
+    tfoot {
+        background-color: #444;
+        color: #fff;
+        font-weight: bold;
+    }
+</style>

@@ -1,0 +1,98 @@
+<!-- -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML ESSENCIAL</title>
+    <style>
+        html {
+            font-family: monospace;
+            color: #333;
+        }
+
+        header h1,
+        nav,
+        footer p {
+            padding: 0 2rem;
+        }
+
+        body {
+            font-size: 1.25rem;
+            margin: 0;
+        }
+
+        section {
+            margin: 0px;
+            padding: 30px;
+            background-color: bisque;
+        }
+
+        section p {
+            max-width: 60rem;
+            text-align: justify;
+        }
+
+        section p span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1> HTML-Essencial para iniciantes</h1>
+    </header>
+    <nav>
+        <a href attr-navegacao="/paginas/inicio.html">Inicio</a> |
+        <a href attr-navegacao="/paginas/sobre.html">Sobre</a> |
+        <a href attr-navegacao="/paginas/tabela.html">Ver dados</a> |
+        <a href attr-navegacao="/formularios/form.html">Formulário de Cadastro</a> |
+    </nav>
+    <section id="conteudo">
+        <h3>Instruções</h3>
+        <p>
+            Para disponibilizar as páginas estáticas: Instalar o http-server de forma global caso ainda não 
+            tenha instalado. Para isso digite <span>npm install --global http-server</span> no terminal.
+
+            Em seguida abrir o terminal na pasta raiz do projeto, onde está localizado o arquivo index.html,
+            e digitar <span>http-server -c-1</span> para iniciar o servidor(por padrão na porta 8080). 
+            A partir disso, as páginas poderão ser acessadas via localhost.
+            A opção -c-1 informa ao servidor que não guarde arquivos em cache
+        </p>
+        <p>
+            Para disponibilizar um servidor para ficar aguardando por submissões de formulários de cadastro:
+            Através de um terminal, acessar a pasta raiz "formularios", onde está localizado o arquivo server.js,
+            que contém a lógica do servidor, e que será disponibilizado através do web framework express.
+
+            Use o comando <span>npm install</span> para que as dependências do express e do body-parser,
+            que estão descritas no package.json, sejam instaladas.
+
+            digitar <span>node server.js</span> para iniciar o servidor na porta 3003
+        </p>
+    </section>
+    <footer>
+        <p>Todos os direitos Reservados &#169</p>
+    </footer>
+
+    <script>
+        //método que fará a requisição ajax
+        document.querySelectorAll('[attr-navegacao]').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+
+            link.onclick = function (e) {
+                e.preventDefault()
+
+                // requisição ajax
+                fetch(link.getAttribute('attr-navegacao'))
+                    .then(conteudoHtml => {
+                        return conteudoHtml.text()
+                    }).then(html => {
+                        conteudo.innerHTML = html
+                    })
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<h3>Cadastre-se</h3>
+<p>Receba dicas incríveis</p>
+
+<!-- O formulário fará uma requisição do tipo POST para o servidor iniciado na porta 3003 -->
+<form action="http://localhost:3003/usuarios" method="POST">
+    <label for="input-nome">Nome</label>
+    <input id="input-nome" type="text" name="nome">
+    
+    <label for="input-senha">Senha</label>
+    <input id="input-senha" type="password" name="senha">
+
+    <label for="caixa-descricao">Nos conte mais sobre você</label>
+    <textarea id="caixa-descricao" name="descricao" cols="30" rows="10"></textarea>
+
+    <div>
+        <label for="tipo-vip">Aluno vip</label>
+        <input id="tipo-vip" type="radio" name="tipo" value="vip">
+
+        <label for="tipo-comum">Aluno comum</label>
+        <input id="tipo-comum" type="radio" name="tipo" value="comum">
+    </div>
+    <div>
+        <label for="aceite-termos">Aceito os termos</label>
+        <input id="aceite-termos" type="checkbox" name="aceite">
+    </div>
+
+    <label for="estado">Selecione seu Estado</label>
+    <select id="estado" name="estado">
+        <option value="AC">Acre</option>
+        <option value="PA">Pará</option>
+        <option value="AM">Amazonas</option>
+        <option value="RR">Roraima</option>
+        <option value="RO">Rondonia</option>
+        <option value="AP">Amapá</option>
+        <option value="TO">Tocantins</option>
+    </select>
+
+    <label for="interesses">Selecione seu(s) interesse(s)</label>
+    <select id="interesses" name="interesses" multiple size="5">
+        <option value="algoritmos">Algoritmos</option>
+        <option value="programacao">Programação</option>
+        <option value="front end">Front end</option>
+        <option value="back end">Back end</option>
+        <option value="banco de dados">Banco de dados</option>
+        <option value="linux">Linux</option>
+    </select>
+
+    <button type="submit">Incluir</button>
+</form>
+
+<style>
+    form {
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        max-width: 30rem;
+    }
+
+    input, textarea, button, select {
+        display: block;
+        margin: 5px;
+    }
+
+    label {
+        margin: 0px 5px;
+    }
+
+    input[type="radio"] {
+        display: inline;
+        margin: 0 20px 2px 0;
+    }
+
+    input[type="checkbox"] {
+        display: inline;
+        margin: 0 20px 2px 0;
+    }
+
+    div {
+        margin: 20px 0px;
+    }
+</style>
