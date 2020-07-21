@@ -1,0 +1,69 @@
+<!-- Fonte: https://origamid.com/projetos/flexbox-guia-completo/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <section class="quadro-explicacao">
+        <h1 class="label-explicacao">Propriedade display</h1>
+        <p>A propriedade display: flex; define o elemento como um flex container, 
+            tornando os seus filhos flex-itens.</p>
+    </section>
+
+    <h1>display: block;</h1>
+    <section class="container">
+        <div class="item cor1">div1</div>
+        <div class="item cor2">div2</div>
+        <div class="item cor3">div3</div>
+        <div class="item cor4">div4</div>
+    </section>
+
+    <h1>display: flex;</h1>
+    <section class="container flex">
+        <div class="item cor1">div1</div>
+        <div class="item cor2">div2</div>
+        <div class="item cor3">div3</div>
+        <div class="item cor4">div4</div>
+    </section>
+
+    <hr>
+    <h1>display flex sem flex-wrap(quebra)</h1>
+    <section class="container flex">
+        <div class="item cor1">Teste 1</div>
+        <div class="item cor2">Teste 2</div>
+        <div class="item cor3">Teste 3</div>
+        <div class="item cor4">Teste 4</div>
+        <div class="item cor5">Teste 5</div>
+        <div class="item cor6">Teste 6</div>
+        <div class="item cor7">Ops, fora</div>
+    </section>
+
+    <h1>display flex com flex-wrap</h1>
+    <section class="container flex flex-wrap">
+        <div class="item cor1">Teste 1</div>
+        <div class="item cor2">Teste 2</div>
+        <div class="item cor3">Teste 3</div>
+        <div class="item cor4">Teste 4</div>
+        <div class="item cor5">Teste 5</div>
+        <div class="item cor6">Teste 6</div>
+        <div class="item cor7">Ops, agora sim</div>
+    </section>
+
+    <hr>
+    <h1>display: flex; // flex-item-1</h1>
+    <section class="container flex">
+        <div class="item flex-item-1 cor1">Teste 1</div>
+        <div class="item flex-item-1 cor2">Teste 2</div>
+        <div class="item flex-item-1 cor3">Teste 3</div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+
+/* Os itens não se expandem para ocupar o container. */
+.grow0 {
+	flex-grow: 0;/*o valor zero fará o item obedecer o width do conteúdo ou o flex-basis.*/
+}
+
+/* Os itens se expandem igualmente para ocupar o container. Utilizando apenas o flex-grow,
+ o crescimento é distribuído igualmente antes e depois do conteúdo de cada flex-item. 
+ (pois por padrão o flex-basis é auto) */
+.grow1 {
+	flex-grow: 1;
+}
+
+/* Os itens se expandem duas vezes mais que aqueles com flex-grow: 1; */
+.grow2 {
+	flex-grow: 2;
+}
+
+.item {
+	margin: 5px;
+	background: tomato;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+/* Flex Container */
+.container {
+	max-width: 400px;
+	margin: 0 auto;
+	display: flex;
+	border: 1px solid #ccc;
+}
+/* Flex Item */
+
+
+h1 {
+	text-align: center;
+	margin: 20px 0 0 0;
+	font-size: 1.25em;
+	font-weight: normal;
+}
+
+body {
+	font-family: monospace;
+	color: #333;
+}
+
+.quadro-explicacao {
+	max-width: 500px;
+	font-size: 1.25em;
+	font-weight: normal;
+	text-align: justify;
+	margin: 0 auto;
+}
+
+.label-explicacao {
+	text-align: left;
+	margin: 0 auto;
+}
+
+.cor1 {
+	background-color: royalblue;
+}
+
+.cor2 {
+	background-color: seagreen;
+}
+
+.cor3 {
+	background-color: tomato;
+}
+
+.cor4 {
+	background-color: pink;
+}
+
+.cor5 {
+	background-color: darkorchid;
+}
+
+.cor6 {
+	background-color: lime;
+}
+
+.cor7 {
+	background-color: yellowgreen;
+}
+
+.cor8 {
+	background-color: burlywood;
+}

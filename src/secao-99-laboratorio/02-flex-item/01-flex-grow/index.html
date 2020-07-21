@@ -1,0 +1,65 @@
+<!-- Fonte: https://origamid.com/projetos/flexbox-guia-completo/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-item flex-grow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="quadro-explicacao">
+        <h1 class="label-explicacao">Propriedade flex-grow</h1>
+        <p>A propriedade flex-grow define a habilidade de um flex item crescer. 
+            Por padrão o valor é zero, assim os flex itens ocupam um tamanho máximo 
+            relacionado o conteúdo interno deles ou ao width definido.
+            <br>
+            Ao definir 1 para todos os Flex Itens, eles tentarão ter a mesma largura e vão ocupar 100% 
+            do container. Digo tentarão pois caso um elemento possua um conteúdo muito largo, ele 
+            irá respeitar o mesmo.
+            <br>
+            Se você tiver uma linha com quatro itens, onde três são flex-grow: 1 e um flex-grow: 2, 
+            o flex-grow: 2 tentará ocupar 2 vezes mais espaço extra do que os outros elementos.
+            <br>
+            OBS: justify-content não funciona em items com flex-grow definido.</p>
+    </section>
+
+    <h1>flex-grow: 0;</h1>
+    <section class="container">
+        <div class="item grow0 cor1">1</div>
+        <div class="item grow0 cor2">2</div>
+        <div class="item grow0 cor2">30</div>
+    </section>
+
+    <h1>flex-grow: 1;</h1>
+    <section class="container">
+        <div class="item grow1 cor1">1</div>
+        <div class="item grow1 cor2">2</div>
+        <div class="item grow1 cor3">3</div>
+    </section>
+
+    <h1>flex-grow: 2;</h1>
+    <section class="container column">
+        <div class="item grow2 cor1">1</div>
+        <div class="item grow2 cor2">2</div>
+        <div class="item grow2 cor3">3</div>
+    </section>
+
+    <h1>flex-grow: 1; // conteúdo largo</h1>
+    <section class="container column-reverse">
+        <div class="item grow1 cor1">1</div>
+        <div class="item grow1 cor2">TestandoTestando2</div>
+        <div class="item grow1 cor3">3</div>
+    </section>
+
+    <h1>flex-grow: (misturado);</h1>
+    <section class="container column-reverse">
+        <div class="item grow0 cor1">1</div>
+        <div class="item grow1 cor2">2</div>
+        <div class="item grow2 cor3">3</div>
+    </section>
+</body>
+
+</html>

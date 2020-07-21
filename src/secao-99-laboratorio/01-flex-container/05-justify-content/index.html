@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justify-content</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="quadro-explicacao">
+        <h1 class="label-explicacao">Propriedade justify-content</h1>
+        <p> A propriedade justify-content faz o alinhamento dos itens-flexs no container 
+            de acordo com a direção. A propriedade só funciona se os itens atuais 
+            não ocuparem todo o container. Isso significa que ao definir flex: 1; ou algo 
+            similar nos itens, a propriedade não terá mais função.
+            <br/>
+            Excelente propriedade para ser usada em casos que você deseja alinhar um 
+            item na ponta esquerda e outro na direita, como em um simples header 
+            com marca e navegação.</p>
+    </section>
+
+
+
+    <h1>justify-content: flex-start;</h1>
+    <section class="container flex-start">
+        <div class="item cor1">1</div>
+        <div class="item cor2">Teste 2</div>
+        <div class="item cor3">3</div>
+        <div class="item cor4">4</div>
+    </section>
+
+    <h1>justify-content: flex-end;</h1>
+    <section class="container flex-end">
+        <div class="item cor1">1</div>
+        <div class="item cor2">Teste 2</div>
+        <div class="item cor3">3</div>
+        <div class="item cor4">4</div>
+    </section>
+
+    <h1>justify-content: center;</h1>
+    <section class="container center">
+        <div class="item cor1">1</div>
+        <div class="item cor2">Teste 2</div>
+        <div class="item cor3">3</div>
+        <div class="item cor4">4</div>
+    </section>
+
+    <h1>justify-content: space-between;</h1>
+    <section class="container space-between">
+        <div class="item cor1">1</div>
+        <div class="item cor2">Teste 2</div>
+        <div class="item cor3">3</div>
+        <div class="item cor4">4</div>
+    </section>
+
+    <h1>justify-content: space-around;</h1>
+    <section class="container space-around">
+        <div class="item cor1">1</div>
+        <div class="item cor2">Teste 2</div>
+        <div class="item cor3">3</div>
+        <div class="item cor4">4</div>
+    </section>
+
+    <h1>justify-content: space-around; // itens com flex: 1;</h1>
+    <section class="container space-around">
+        <div class="item flex cor1">1</div>
+        <div class="item flex cor2">Teste 2</div>
+        <div class="item flex cor3">3</div>
+        <div class="item flex cor4">4</div>
+    </section>
+    <hr>
+
+    <h1>justify-content: flex-start; // column</h1>
+    <section class="container flex-start column">
+        <div class="item cor1">1</div>
+        <div class="item cor2">Teste 2</div>
+        <div class="item cor3">3</div>
+        <div class="item cor4">4</div>
+    </section>
+
+    <h1>justify-content: flex-end; // column</h1>
+    <section class="container flex-end column">
+        <div class="item cor1">1</div>
+        <div class="item cor2">Teste 2</div>
+        <div class="item cor3">3</div>
+        <div class="item cor4">4</div>
+    </section>
+
+    <h1>justify-content: center; // column</h1>
+    <section class="container center column">
+        <div class="item cor1">1</div>
+        <div class="item cor2">Teste 2</div>
+        <div class="item cor3">3</div>
+        <div class="item cor4">4</div>
+    </section>
+
+    <h1>justify-content: space-between; // column</h1>
+    <section class="container space-between column">
+        <div class="item cor1">1</div>
+        <div class="item cor2">Teste 2</div>
+        <div class="item cor3">3</div>
+        <div class="item cor4">4</div>
+    </section>
+
+    <h1>justify-content: space-around; // column</h1>
+    <section class="container space-around column">
+        <div class="item cor1">1</div>
+        <div class="item cor2">Teste 2</div>
+        <div class="item cor3">3</div>
+        <div class="item cor4">4</div>
+    </section>
+
+    <h1>justify-content: space-around; // column // itens com flex: 1;</h1>
+    <section class="container space-around column">
+        <div class="item flex cor1">1</div>
+        <div class="item flex cor2">Teste 2</div>
+        <div class="item flex cor3">3</div>
+        <div class="item flex cor4">4</div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+
+.nowrap {
+	flex-wrap: nowrap; /*Valor padrão, não permite a quebra de linha.*/
+}
+
+.wrap {
+	flex-wrap: wrap; /*Quebra a linha assim que um dos flex itens não puder mais ser compactado.*/
+}
+
+.wrap-reverse {
+	/*Quebra a linha assim que um dos flex itens não puder mais ser compactado. 
+	A quebra é na direção contrária, ou seja para a linha acima.*/
+	flex-wrap: wrap-reverse; 
+}
+
+/* Flex Container */
+.container {
+	max-width: 360px;
+	margin: 0 auto;
+	display: flex;
+	border: 1px solid #ccc;
+}
+/* Flex Item */
+.item {
+	/* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho 
+	máximo do container. */
+	flex: 1;
+	margin: 5px;
+	background: tomato;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+h1 {
+	text-align: center;
+	margin: 20px 0 0 0;
+	font-size: 1.25em;
+	font-weight: normal;
+}
+
+body {
+	font-family: monospace;
+	color: #333;
+}
+
+.quadro-explicacao {
+	max-width: 500px;
+	font-size: 1.25em;
+	font-weight: normal;
+	text-align: justify;
+	margin: 0 auto;
+}
+
+.label-explicacao {
+	text-align: left;
+	margin: 0 auto;
+}
+
+.cor1 {
+	background-color: royalblue;
+}
+
+.cor2 {
+	background-color: seagreen;
+}
+
+.cor3 {
+	background-color: tomato;
+}
+
+.cor4 {
+	background-color: pink;
+}
+
+.cor5 {
+	background-color: darkorchid;
+}
+
+.cor6 {
+	background-color: lime;
+}
+
+.cor7 {
+	background-color: yellowgreen;
+}
+
+.cor8 {
+	background-color: burlywood;
+}

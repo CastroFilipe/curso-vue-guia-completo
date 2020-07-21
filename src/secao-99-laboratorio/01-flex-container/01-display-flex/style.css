@@ -1,0 +1,85 @@
+
+/* display: flex; Torna o elemento um flex container, transformando todos os 
+seus filhos diretos em flex itens.*/
+.flex {
+	display: flex;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.flex-item-1 {
+	flex: 1;
+}
+
+/* Flex Item */
+.item {
+	margin: 5px;
+	background: tomato;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.container {
+	max-width: 400px;
+	margin: 0 auto;
+	border: 1px solid rgb(0, 0, 0);
+}
+
+h1 {
+	text-align: center;
+	margin: 20px 0 0 0;
+	font-size: 1.25em;
+	font-weight: normal;
+}
+
+body {
+	font-family: monospace;
+	color: #222;
+}
+
+.quadro-explicacao {
+	max-width: 500px;
+	font-size: 1.25em;
+	font-weight: normal;
+	text-align: justify;
+	margin: 0 auto;
+}
+
+.label-explicacao {
+	text-align: left;
+	margin: 0 auto;
+}
+
+.cor1 {
+	background-color: royalblue;
+}
+
+.cor2 {
+	background-color: seagreen;
+}
+
+.cor3 {
+	background-color: tomato;
+}
+
+.cor4 {
+	background-color: pink;
+}
+
+.cor5 {
+	background-color: darkorchid;
+}
+
+.cor6 {
+	background-color: lime;
+}
+
+.cor7 {
+	background-color: yellowgreen;
+}
+
+.cor8 {
+	background-color: burlywood;
+}

@@ -1,0 +1,52 @@
+<!-- Fonte: https://origamid.com/projetos/flexbox-guia-completo/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-item flex-grow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="quadro-explicacao">
+        <h1 class="label-explicacao">Propriedade order</h1>
+        <p>Modifica a ordem dos flex itens. Sempre do menor para o maior, 
+            assim order: 1, aparece na frente de order: 5..</p>
+    </section>
+
+    <h1>order: misturados;</h1>
+    <section class="container">
+        <div class="item order2 cor1">1</div>
+        <div class="item order4 cor2">2</div>
+        <div class="item order1 cor3">3</div>
+        <div class="item order3 cor4">4</div>
+    </section>
+
+    <h1>order: negativo; / flex-grow</h1>
+    <section class="container">
+        <div class="item order2 flex-grow cor1">1</div>
+        <div class="item order-1 flex-grow cor2">2</div>
+        <div class="item order1 flex-grow cor3">3</div>
+        <div class="item order3 flex-grow cor4">4</div>
+    </section>
+
+    <h1>order: valores iguais; / grow / column</h1>
+    <section class="container column">
+        <div class="item order2 flex-grow cor1">1</div>
+        <div class="item order2 flex-grow cor2">2</div>
+        <div class="item order1 flex-grow cor3">3</div>
+        <div class="item order1 flex-grow cor4">4</div>
+    </section>
+
+    <h1>order: valores iguais; / grow / column</h1>
+    <section class="container column">
+        <div class="item flex-grow cor1">1</div>
+        <div class="item order2 flex-grow cor2">2</div>
+        <div class="item flex-grow cor3">3</div>
+        <div class="item order-1 flex-grow cor4">4</div>
+    </section>
+</body>
+
+</html>
