@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tamanho Box</title>
+    <style>
+        body {
+            font-size: 45px;
+        }
+        
+        div {
+            background-color: chocolate;
+            width: 100%;
+            height: 300px;
+            padding: 100px;
+            border: 20px solid red;
+            
+            /* o conrtent-box considera apenas o conteúdo para definir o tamanho do elemento, 
+            não considera a borda e o padding no tamanho total.
+            Com content-box o valor width de 100% indica que o conteúdo terá 100% da largura do pai.
+            Na visualização da página, o elemento com Conteúdo + borda + padding 
+            ultrapassam a largura da página.   */
+            /* box-sizing: content-box; */
+            
+            /*O bodrder-box considera o conteúdo + borda + padding como sendo o tamanho da caixa.
+            Nesse caso, o elemento não irá ultrapassar a largura da página pois 
+            conteúdo + borda + padding = 100%.
+            Esse é o comportamento mais adequado, para a maioria das situações. 
+            Então é uma boa ideia definir o box-sinzing em elementos pais para que os filhos herdem
+            por padrão o border-box*/
+            /* box-sizing: border-box; */
+        }
+
+        /* Somente através do seletor universal é possível aplicar o box-sizing em todos os filhos */
+        * {
+            box-sizing: border-box;
+        }
+        </style>
+</head>
+
+<body>
+    <div>
+        O tamanho do Box é...
+    </div>
+</body>
+
+</html>

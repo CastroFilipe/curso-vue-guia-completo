@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="../css/04-estilo-tag.css">
+    <style>
+        /* SELETOR UNIVERSAL: Seleciona todos os elementos */
+        /* * {
+            color: yellowgreen;
+            background-color: pink;
+        } */
+
+        /* SELETOR DE CLASSE: Seleciona os elementos que possuem a classe tag */
+        /* .tag {
+            color: red;
+            background-color: pink;
+        } */
+
+        /* SELETOR DE ID: Seleciona o elemento de id especificado */
+        /* #aprovados {
+            color: red;
+            background-color: pink;
+        } */
+
+        /*SELETOR DE DESCENDENTE DIRETO: Seleciona a div dentro do elemento com id=aninhado */
+        /* #aninhado > div {
+            color: red;
+            background-color: pink;
+        } */
+
+        /* SELETOR DE QUALQUER DESCENDENTE: Seleciona qualquer descendente 'section' dentro do elemento
+        com id=aninhado, mesmo que a section não seja um descendente direto */
+        /* #aninhado section {
+            color: red;
+            background-color: pink;
+        } */
+
+        /* SELETOR DE IRMÃO ADJACENTES: Seleciona qualquer elemento ul localizado logo após algum paragrafo.*/
+        /* p + ul {
+            color: red;
+            background-color: pink;
+        } */
+
+        /* SELETOR DE IRMÃO NÃO ADJACENTE: Seleciona qualquer elemento ol, irmão de um elemnto p, mesmo
+        que estes não estejam um ao lado do outro. */
+        /* p ~ ol {
+            color: red;
+            background-color: pink;
+        } */
+
+        /* SELETOR DE PROPRIEDADE: Seleciona qualquer elemento com a propriedade 'feira' */
+        /* [feira] {
+            color: red;
+            background-color: pink;
+        } */
+
+        /* SELETOR DE PROPRIEDADE: Seleciona qualquer elemento com a propriedade 'feira' e que possua 
+        o valor 'alimento' nessa propriedade */
+        /* [feira=alimento] {
+            color: red;
+            background-color: pink;
+        } */
+
+        /* SELETOR DE FILHO: Seleciona o segundo filho de um elemento pai. No exemplo, selecionará 
+        o filho li, localizado na posição 2 (o primeiro filho é o label 'ul') */
+        /* li:nth-child(2) {
+            color: red;
+            background-color: pink;
+        } */
+
+        /* SELETOR DE FILHOs ÍMPARES: Seleciona os filhos ímpares de um elemento. Use 'even' ao invés
+        de 'odd' para pegar os pares.
+        Obs: o label 'section' é o primeiro filho, por isso o label e o paragrafo serão selecionados*/
+        /* section > :nth-child(odd) {
+            font-size: 1.5em;
+            color: greenyellow;
+            background-color: rebeccapurple;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='alimento'>
+                <li class="tag">Arroz</li>
+                <li class="tag">Feijão</li>
+            </ul>
+            <ul class='tag' feira='higiene'>
+                <li class="tag">Sabonete</li>
+                <li class="tag">Desodorante</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li class="tag">Maria</li>
+                <li class="tag">Pedro</li>
+                <li class="tag">Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                        <p class='tag'>4</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/04-tag.js"></script>
+</body>
+
+</html>

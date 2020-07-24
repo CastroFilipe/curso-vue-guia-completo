@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especificidade CSS</title>
+    <style>
+        /* 
+            Calculadora de especificidade
+            https://specificity.keegan.st/
+            maiores especificidades :
+            1. estilo inline(aplicado diretamente no elemento através do atributo 'style')
+            2. Id
+            3. Classe, pseudo-classe, atributo
+            4. Elemento, pseudo-elemento
+        */
+
+
+        /* ESTILO 1
+            Pouco especifico, Nível de especificidade de um Elemento. 
+        */
+        body { 
+            font-size: 40px;
+            background-color: tomato;
+        }
+
+        /* ESTILO 2
+            Mais especifico que body
+        */
+        div {
+            background-color: blue;
+            color: white;
+        }
+
+        /* ESTILO 3
+            Mais especifico que o ESTILO 2, não importando a ordem.
+        */
+        div[wm-cor] {
+            background-color: goldenrod;
+        }
+
+        /* ESTILO 4
+            Mesmo grau de importância do ESTILO 3. Se o ESTILO 4 for colocado antes do ESTILO 3
+            o hover vai perder no critério de desempate, deixando de funcionar na div 
+            com a propriedade 'wm-color'
+        */
+        div:hover {
+            background-color: indigo;
+        }
+
+        /* ESTILO 5 
+            Mais especifico que o estilo 1 e 2. 
+            Mesmo nível do estilo 3 e 4
+        */
+        div.estilo {
+            background-color: green;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="unico1" class="estilo">
+        #unico1 vs .estilo vs inline
+    </div>
+    <div id="unico2" class="estilo">#unico2 vs .estilo</div>
+    <div class="estilo" wm-cor>.estilo vs wm-cor</div>
+    <div wm-cor>wm-cor</div>
+    <div class="estilo">.estilo</div>
+    <div>elemento</div>
+</body>
+
+</html>

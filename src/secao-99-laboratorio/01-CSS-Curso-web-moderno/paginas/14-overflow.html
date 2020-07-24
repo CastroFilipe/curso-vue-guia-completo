@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Overflow</title>
+    <style>
+        /* A propriedade overflow trata de elementos que extrapolaram os limites de altura e 
+        largura do pai. Ela irá indicar o que fazer com o conteúdo nesses casos.*/
+        div {
+            font-size: 40px;
+            height: 100px;
+            width: 260px;
+            border: solid 3px;
+
+            /* o valor hidden fará o conteúdo que extrapolou ser escondido */
+            overflow: hidden;
+
+            /* criará linhas de scroll dentro do elemento pai, para assim navegar por todo o conteúdo
+            do filho que não coube */
+            /* overflow: scroll; */
+
+            /* criará o scroll apenas no eixo x. Experimentar tbm o overflow-y*/
+            overflow-x: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        TudoFuncionaMuitoBemEmCSS!!!
+        Texto muito grande para caber nessa div.
+        Já pensou qual será o comportamento padrão?
+    </div>
+</body>
+</html>

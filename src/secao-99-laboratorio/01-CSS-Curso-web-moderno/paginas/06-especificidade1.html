@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especificidade CSS</title>
+    <style>
+        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+        /* A especificidade indica qual estilo CSS será aplicado em detrimento de outros. 
+            As regras gerais são:
+            1. Regra com !importante têm prioridade maior
+            2. Seletores mais especificos têm prioridade maior que seletores mais genéricos.
+            3. Se houver empate na prioridade, a última regra css processada é que será aplicada. Nesse caso
+            a ordem em que o código css está disposto é relevante.
+        */
+        
+        /* ESTILO 1 */
+        p {
+            background-color: blue;
+            padding: 25px;
+        }
+        
+        /* ESTILO 2.
+        A classe 'observacao' é mais especifica que a tag 'p', logo a cor de background 'green' 
+        será aplicada em detrimento de 'blue'. A ordem de processamento não é relevante nesse caso pois 
+        se o ESTILO 2 for colocado antes do ESTILO 1 o resultado será o mesmo. */
+        .observacao {
+            background-color: green;
+            font-size: 30px;
+            border: dashed 5px;
+            color: teal !important;
+        }
+
+        /* ESTILO 3.
+        O estilo 3 é o mais especifico dentre os 3 estilos apresentados pois seleciona um elemento 'p'
+        que contém uma classe 'observacao'. As regras desse estilo irão sobrepor as outras, 
+        independente da ordem de codificação dos estilos. A única regra que não será aplicada 
+        é a regra de cor pois no ESTILO 2 existe uma regra !important
+        */
+        p.observacao {
+            color: white;
+            padding: 2px;
+            background: linear-gradient(to right, red, yellow);
+        }
+
+    </style>
+</head>
+
+<body>
+    <p class='observacao'>Olha essa observação!!!!</p>
+</body>
+
+</html>

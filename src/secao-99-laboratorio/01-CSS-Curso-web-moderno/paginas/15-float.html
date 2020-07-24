@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Float</title>
+    <style>
+        /* 
+            Obs: A propriedade float não é mais tão interessante para os dias atuais. É preferivél fazer
+            esse tipo de posicionamento com display flex
+        */
+        body {
+            background-color: bisque;
+            font-size: 40px;
+            color: #fff;
+        }
+
+        .c1 {
+            background-color: red;
+            float: right;
+        }
+
+        .c2 {
+            background-color: green;
+
+            /*limpará o float do elemento anterior, fazendo com que o elemento c2 considere a 
+            presença do elemento c1 na página. Experimentar com o valor left em c1 e c2 e 
+            com o valor both(ambos, left e rigth)*/
+            clear: right; 
+        }
+        
+        .c3 {
+            background-color: blue;
+        }
+
+        .c4 {
+            background-color: orange;
+        }
+
+        div {
+            height: 80px;
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c1">1</div>
+    <div class="c2">2</div>
+    <div class="c3">3</div>
+    <div class="c4">4</div>
+</body>
+
+</html>

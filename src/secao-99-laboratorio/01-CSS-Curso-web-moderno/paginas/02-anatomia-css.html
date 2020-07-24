@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anatomia CSS</title>
+    <style>
+        .seletor {
+            color: #444;
+            font-size: 5em;
+            text-align: center;
+            width: 50%;
+
+            border-color: red;
+            border-style: solid;
+            border-bottom-width: 0.1em;
+            border-top-width: 0.1em;
+            border-left-width: 0.2em;
+            border-right-width: 0.2em;
+            border-right-color: green;
+
+            /* PROPRIEDADES QUE ACEITAM MÚLTIPLOS VALORES */
+            border: solid 0.1em navy; /*Shorthand properties*/
+            font-family: Arial, Helvetica, sans-serif;
+
+            /* FUNÇÕES */
+            width: calc(100% - 150px);/*ocupa 100% do espaço do elemento pai - 150px*/
+            background-color: rgb(25, 150, 120);/*função rgb*/
+            background-color: rgba(25, 150, 120, 0.6);/*função rgba, o último parâmetro indica transparência de 60%*/
+        }
+
+        /* USANDO PSEUDO-CLASSE ':' */
+        .seletor:hover {
+            background-color: salmon;
+        }
+
+        /* USANDO PSEUDO-CLASSE '::' */
+        .seletor::first-letter {
+            color: red;
+            font-size: 200%;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="seletor">Conteúdo</div>
+</body>
+
+</html>

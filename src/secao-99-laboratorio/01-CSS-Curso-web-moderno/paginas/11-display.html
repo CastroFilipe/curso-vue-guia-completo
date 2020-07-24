@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+    <style>
+        body {
+            font-size: 40px;
+            color: #fff;
+            background-color: tomato;
+        }
+
+        ul { padding: 0; }
+
+        div { background-color: teal; }
+
+        span { background-color: turquoise; }
+
+        li { background-color: violet; }
+
+        span, div, li {
+            /* width: 50%; */
+            width: 200px;
+            height: 80px;
+            padding-top: 30px;
+            text-align: center;
+
+            /*No display block cada elemento ficará em uma linha a parte. O display block permite que os valores de
+            altura(height) e largura(width) sejam definidos.*/
+            /* display: block; */
+
+            /*No display inline os itens ficarão um ao lado do outro. O tipo inline impede que width e height 
+            sejam definidos. Por padrão o span possuí display inline e por esse motivo não é possível definir,
+            inicialmente,a largura ou altura de um span*/
+            /* display: inline; */
+
+            /* O display inline block mantém os itens em linha e permite que sejam definidos os valores
+            para width e height, diferente do inline que não permite.*/
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Texto 1</div>
+    <span>Texto 2</span>
+    <span>Texto 3</span>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</body>
+
+</html>

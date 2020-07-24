@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Herança</title>
+    <style>
+        /* 
+            Os filhos herdarão font-family e font-size.
+            As propriedades border e padding não serão herdadas, por padrão, pelos elementos filhos.
+        */
+        body {
+            font-family: monospace;
+            font-size: 40px;
+            border: solid 3px red;
+            padding: 50px;
+        }
+
+        /* 
+            o valor inherit fará com que o atributo border herde os valores do elemento pai
+        */
+        div {
+            border: inherit; 
+        }
+
+        p {
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Herança</h1>
+    <div>Div: Estou herdando do "pai" body
+        <p>
+            P:Sou filho da Div e tbm estou herdando as fontes do "avô" body
+        </p>
+    </div>
+</body>
+
+</html>

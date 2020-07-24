@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Origem CSS: Externo, Interno e Inline</title>
+    <!-- Estilo css interno -->
+    <style>
+        .cor-fundo {
+            background-color: tomato;
+        }
+    </style>
+
+    <!-- Estilo css externo. O último estilo a ser processado tem preferência -->
+    <link rel="stylesheet" href="../css/03-estilo-externo.css">
+</head>
+
+<!-- Estilo css inline. Sempre terá maior prioridade -->
+<body class="cor-fundo" style="background-color: yellow;">
+    <h1>E agora?</h1>
+    <p>
+        A ordem dos estilos interno e externo definirá qual deles será utilizado.
+        Assim, o último estilo a ser processado será aquele utilizado.
+        <br><br>
+        O estilo css inline, utilizado diretamente no elemento HTML via propriedade 'style', sempre terá maior prioridade.
+    </p>
+</body>
+
+</html>
