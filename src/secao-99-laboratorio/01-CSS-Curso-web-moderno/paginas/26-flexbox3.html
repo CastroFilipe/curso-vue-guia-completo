@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox #03</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        div {
+            border: solid 5px brown;
+            font-size: 40px;
+        }
+
+        .flex-container div {
+            box-sizing: border-box;
+        }
+
+        .flex-container {
+            display: flex;
+        }
+
+        .flex-container div {
+            /* define a largura do flex-item. O elemento crescerá 200px na direção do main axis.*/
+            flex-basis: 200px;
+
+            /* A largura tbm pode ser utilizada para definir o tamanho de um flex-item porém,
+            se a propriedade flex-basis for setada, a largura width perderá no quesito de 
+            prioridade, não sendo aplicada */
+            width: 300px;
+        }
+
+        .flex-container div:nth-child(4) {
+            background-color: violet;
+
+            /* A propriedade flex é uma propriedade shortcut e que une as propriedades
+            flex-grow, flex-shrink e flex-basis */
+            flex: 3 6 100px
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="flex-container tag nolabel">
+        <div class="tag nolabel">1</div>
+        <div class="tag nolabel">2</div>
+        <div class="tag nolabel">3</div>
+        <div class="tag nolabel">4</div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

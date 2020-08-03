@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Unidades #02</title>
+    <style>
+       .fora {
+           position: relative;
+           background-color: coral;
+           width: 400px;
+           height: 400px;
+           padding: 50px;
+       }
+
+       .dentro {
+           background-color: mediumvioletred;
+           height: 100px;
+
+           /*Inicialmente ocupará 100% de largura do conteúdo pai. 
+            O padding do pai não entra na conta, logo ocupará os 400px da div pai
+            */
+           width: 100%;
+
+           position: static; /*Posição padrão*/
+           position: relative; /*A largura de 100% continua sendo calculada baseada no conteúdo do pai*/
+           
+           /*Agora o tamanho da largura será calculado baseado no conteudo + padding da div pai*/
+           position: absolute;
+
+           /*Agora a largura será calculado a partir da viewport (área visível do usuário de uma página da web.)*/
+           position: fixed;
+       }
+    </style>
+</head>
+<body>
+    <div class="fora">
+        <div class="dentro"></div>
+    </div>
+</body>
+</html>

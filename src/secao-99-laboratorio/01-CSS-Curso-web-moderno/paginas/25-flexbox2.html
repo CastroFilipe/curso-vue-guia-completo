@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox #02</title>
+    <link rel="stylesheet" href="">
+    <style>
+        div {
+            border: solid 5px yellowgreen;
+            font-size: 40px;
+        }
+
+        .flex-container div {
+            box-sizing: border-box;
+        }
+
+        .flex-container {
+            display: flex;
+            height: 300px;
+            width: 600px;
+        }
+
+        /* pegará a terceira div do container */
+        .flex-container div:nth-child(3){
+            background-color: indianred;
+            
+            /*A propriedade order define a ordem de posicionamento dos flex-itens.
+            O valor padrão para todos os flex-itens é zero, indicando que a ordem de disposição 
+            das divs no html deverá ser respeitada*/
+            order: 0;
+
+            /*o terceiro filho passa a ter order: 1, por isso, ele será disposto na última posição
+            já que os outros flex-itens possuem order zero*/
+            order: 1;
+
+            /*Agora o terceiro flex-item possui order: -1 e será disposto a frente dos outros */
+            order: -1;
+
+            /*O flex-item div se posiciona de forma centralizada em relação ao container pai*/
+            align-self: center;
+            align-self: flex-start;
+            align-self: flex-end;
+            align-self: stretch; /*valor padrão que fará o flex-item esticar para caber no container*/
+        }
+
+        .flex-container div {
+            width: 100px;
+
+            /*A propriedade flex-grow indica como o espaço restante e não ocupado será dividido
+            entre cada flex-item. o Valor padrão zero indica que o espaço restante não será dividido
+            entre eles.*/
+            flex-grow: 0;
+
+            /* Será aplicado em todas as divs, assim o espaço restante será dividido igualmente
+            entre as 4 divs */
+            flex-grow: 1;
+        }
+
+        .flex-container div:nth-child(2) {
+            /* Em relação ao espaço restante, a div selecionada terá uma fatia 2 vezes maior 
+            do que cada um dos outros flex-itens que possuem grow igual a 1 */
+            flex-grow: 2;
+            background-color: teal;
+        }
+
+        .flex-container {
+            /* As 4 divs irão encolher para caber no container. O grau de encolhimento de
+            cada flex-item pode ser controlado pela propriedade flex-shrink. Que funciona
+            de forma semelhante ao flex-grow. Com o flex-shrink pode-se definir que alguma
+            div encolha menos que outras */
+            width: 300px;
+        }
+
+        .flex-container div:nth-child(1) {
+            /* A primeira div é aquela que mais encolherá */
+            flex-shrink: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container tag nolabel">
+        <div>1</div>
+        <div class="prioridade">2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

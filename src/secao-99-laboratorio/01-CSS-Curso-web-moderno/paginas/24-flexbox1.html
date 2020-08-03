@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox #01</title>
+    <link rel="stylesheet" href="">
+    <style>
+        div {
+            border: 5px solid green;
+            font-size: 40px;
+            margin: 5px;
+        }
+
+        .big {
+            font-size: 1.5em;
+        }
+
+        .flex-container {
+            /* Transforma o elemento em um flex container. Os filhos do elemento se tornam flex-itens*/
+            display: flex;
+
+            /* 
+                A propriedade flex-direction define o eixo principal(main axis) e 
+                a direção(normal ou ivertido) 
+            */
+            flex-direction: column;
+            flex-direction: column-reverse;
+            flex-direction: row-reverse;
+            flex-direction: row; /*padrão*/
+
+            /*Definido a largura de 60% e diminuindo a tela os flex-itens não irão para a próxima
+            linha, causando overflow*/
+            width: 60%;
+
+            /* Por padrão não há quebra de linha quando os flex-itens ultrapassam o tamanho do container. 
+            Esse comportamento pode ser mudado com a propriedade flex-wrap*/
+            flex-wrap: nowrap; /*padrão, não permite quebra de linha*/
+            flex-wrap: wrap;
+            flex-wrap: wrap-reverse; /*Quebra de linha reverso*/
+
+            /* propriedade shortcut que une flex-direction e flex-wrap */
+            flex-flow: row wrap-reverse;
+            flex-flow: column-reverse wrap;
+            flex-flow: row wrap;
+
+            /* alinhamento dos flex-itens com justify-content */
+            justify-content: flex-start; /*alinha no início do main axis*/
+            justify-content: flex-end;
+            justify-content: center; /*alinha os flex-itens no centro do main axis*/
+            justify-content: space-around;
+            justify-content: space-between;
+            justify-content: space-evenly;
+
+            /*Até aqui, as propriedades foram utilizadas levando em consideração o main axis. 
+            As propriedades a seguir fazem o alinhamento dos flex-itens em relação ao CROSS-AXIS */
+            height: 400px;
+
+            align-items: stretch; /*padrão, fará com que os flex-itens se estiquem para ocupar todo o container pai*/
+            align-items: baseline; /*O alinhamento é feito a partir da baseline(linha inferior,na base) das fontes*/
+            align-items: flex-start; /*alinhamento dos flex-itens no INÍCIO do cross-axis*/
+            align-items: flex-end;/*alinhamento dos flex-itens no FIM do cross-axis*/
+            align-items: center;/*alinhamento dos flex-itens no CENTRO do cross-axis*/
+
+            /*A propriedade align-content pode ser usada quando tiver MAIS DE UMA LINHA com flex-itens.
+            Obs: testar com a tela reduzida*/
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: center;
+            align-content: space-between;
+            align-content: space-around;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container tag nolabel">
+        <div class="tag nolabel">1</div>
+        <div class="tag nolabel">2</div>
+        <div class="tag nolabel big">3</div>
+        <div class="tag nolabel">4</div>
+        <div class="tag nolabel">5</div>
+        <div class="tag nolabel">6</div>
+        <div class="tag nolabel big">7</div>
+        <div class="tag nolabel">8</div>
+        <div class="tag nolabel">9</div>
+        <div class="tag nolabel">10</div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

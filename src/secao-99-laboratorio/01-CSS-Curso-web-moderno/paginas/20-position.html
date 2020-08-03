@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Position</title>
+    <style>
+        body {
+            background-color: burlywood;
+        }
+
+        div {
+            border: 1px solid black;
+            font-size: 60px;
+            padding: 25px;
+        }
+
+        /* valor padrão para position */
+        .static {
+            /* left e top não são aplicados quando position: static */
+            top: 100px;
+            left: 100px;
+            background-color: teal;
+        }
+
+        .fixed {
+            position: fixed;
+            /* O position: fixed aplicará os valores de bottom e right */
+            bottom: 30px;
+            right: 0;
+            background-color: tomato;
+        }
+
+        .relative1 {
+            position: relative;
+            /* left e top está relacionado com a distância ao elemento anterior e não a viewport */
+            left: 50px;
+            top: 5px;
+            background-color: seagreen;
+        }
+
+        .absolute1 {
+            /* ocupará uma posição absoluta em relação a página */
+            position: absolute;
+            left: 250px;
+            top: 100px;
+            background-color: violet;
+        }
+
+        .relative2 {
+            position: relative;
+            left: 250px;
+            top: 700px;
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+        }
+
+        .absolute2 {
+            /* posicionamento absoluto em relção ao pai, que está como relativo. */
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 20px;
+            height: 20px;
+            background-color: green;
+        }
+
+        .sticky {
+            position: -webkit-sticky; /*Safari*/
+            position: sticky;
+            background-color: indigo;
+            top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="static">Static (Padrão)</div>
+    <div class="fixed">Fixed</div>
+    <div class="relative1">Relative</div>
+    <div class="absolute1">Absolute</div>
+
+    <div class="relative2">
+        <div class="absolute2"></div>
+    </div>
+
+    <div class="sticky">Sticky</div>
+    <p style="padding-bottom: 2000px;">Opa</p>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid #01</title>
+    <style>
+        /* https://caniuse.com/#feat=css-grid */
+        
+        html,
+        body {
+            margin: 20px;
+            height: calc(100% - 40px);
+            background-color: lightgray;
+        }
+        
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            border: solid 5px dodgerblue;
+            background: #fff;
+        }
+
+        body {
+            /*A propriedade display grid trabalha como uma matriz bidimensional*/
+            display: grid;
+
+            /*COLUNAS*/
+
+            /*O grid será composto de duas colunas com 50% de largura cada*/
+            grid-template-columns: 50% 50%;
+
+            /*O grid será composto de duas 12 colunas com 8.33% de largura cada*/
+            grid-template-columns: repeat(4, 8.33% 8.33% 8.33%);
+
+            /* Idem ao anterior */
+            grid-template-columns: repeat(12, 8.33%);
+            
+            /*O grid será composto por 12 colunas com 100px cada*/
+            grid-template-columns: repeat(11, 100px) 100px;
+
+            /*O grid será comporto por 3 colunas, a primeira com 200px fixos, a segunda com 20% da largura do body,
+            a terceira representa 1 fragmento, nesse caso o fragmento ocupará o restante dda largura disponível*/
+            grid-template-columns: 200px 20% 1fr;
+
+            /*O grid será composto por 12 colunas. A primeira contendo 3 fragmentos, a sergunda 6 fragmentos e 
+            a terceira 3 fragmentos.*/
+            grid-template-columns: 3fr 6fr 3fr;
+
+            /* LINHAS */
+            
+            /*O grid será composto 4 linhas, cada uma com os respectivas alturas.*/
+            grid-template-rows: 50% 25% 12.5% 12.5%;
+
+            /*O grid será composto de 4 linhas pois a quantidade de elementos não caberá nas duas definidas abaixo. 
+            A primeira linha terá o valor fixo de 100px, a segunda ocupará o máximo possível de espaço disponível,
+            a terceira e quarta linha ocuparão apenas o espaço necessário para renderizar o conteúdo interno de cada uma*/
+            grid-template-rows: 100px 1fr;
+
+            /*O grid será composto de 4 linhas, a primeira com 100px de altura e as demais serão distribuídas de forma
+            igualitaria no espaço restante*/
+            grid-template-rows: 100px auto;
+
+            grid-template-rows: 100px auto auto auto auto;
+        }
+
+        .d8 {
+            /* A div 8 iniciará na coluna 2 e irá até a coluna 4. A numeração das colunas nesse caso é
+            baseado nas linhas divisórias de cada coluna, verificar essa númeração no inspecionar elementos 
+            do firefox, onde é possível visualizar o grid de forma mais fácil*/
+            grid-column-start: 2;
+            grid-column-end: 4;
+
+            /* Faz a mesma coisa que as duas propriedades anteriores */
+            grid-column-end: span 2;
+
+            /*Comportamento semelhante ao anterior, porém em relação às linhas*/
+            grid-row-start: 3; 
+            grid-row-end: 5;
+
+            /* Faz a mesma coisa que as duas propriedades anteriores */
+            grid-row-end: span 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+    <div class="d4">4</div>
+    <div class="d5">5</div>
+    <div class="d6">6</div>
+    <div class="d7">7</div>
+    <div class="d8">8</div>
+    <div class="d9">9</div>
+    <div class="d10">10</div>
+    <div class="d11">11</div>
+    <div class="d12">12</div>
+</body>
+
+</html>

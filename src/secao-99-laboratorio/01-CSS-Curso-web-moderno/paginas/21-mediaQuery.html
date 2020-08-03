@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Media Query</title>
+    <style>
+        div {
+            font-size: 40px;
+            margin: 20px;
+            padding: 20px;
+            border: solid 5px;
+            display: none;
+        }
+
+        /* O uso de media Query permite criar responsividade nas páginas. Onde o conteúdo se ajusta de acordo
+            com o tamanho do viewport. 
+
+            No exemplo max-width é uma condição para a aplicação do estilo css .pequeno. A condição indica que o
+            estilo será aplicado apenas se o componente possuir no máximo 600px de largura
+        */
+        @media (max-width: 600px) {
+            .pequeno {
+                display: block;
+                background-color: blue;
+            }
+        }
+
+        /* 
+            As duas condições funcionam como um OU lógico. Basta que apenas uma delas seja satisfeita
+            para a aplicação do estilo .pequeno-retrato ocorra.
+
+            Nesse caso, o elemento deverá possuir no máximo 1000px de largura ou orientação retrato. 
+            Usar o console de desenvolvedor e selecionar a visualização de dispositivos móveis para testar.
+        */
+        @media (max-width: 1000px), (orientation: portrait) {
+            .pequeno-retrato {
+                display: block;
+                background-color: violet;
+            }
+        }
+
+        /* 
+            As duas condições funcionam como um AND lógico. 
+
+            Nesse caso, o elemento deverá possuir o tamanho entre 700px e 1200px
+        */
+        @media (min-width: 700px) and (max-width: 1200px) {
+            .intervalo {
+                display: block;
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pequeno">Pequeno</div>
+    <div class="pequeno-retrato">Pequeno ou Retrato</div>
+    <div class="intervalo">Intervalo</div>
+</body>
+</html>
