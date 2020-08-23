@@ -1,5 +1,6 @@
 # Curso Vue js - O guia completo
-![Progresso](https://img.shields.io/badge/Progresso-35%25-green) 
+![Status em progresso](https://img.shields.io/badge/STATUS-SUSPENSO-ffa500?style=flat) 
+![Progresso](https://img.shields.io/badge/PROGRESSO-35%25-green) 
 <a href="https://unlicense.org/" target="_blank"><img alt="GitHub license" src="https://img.shields.io/github/license/CastroFilipe/curso-vue-js-2-o-guia-completo"></a>  
 
 Repositório contendo o código desenvolvido no acompanhamento das aulas do curso “Curso Vue JS 2 - O Guia Completo”, na plataforma de ensino Udemy. No curso são abordados conceitos referentes ao desenvolvimento front-end com Vue JS 2, Vue router, Vuex, Vue cli e demais tecnologias relacionadas.
@@ -17,12 +18,13 @@ Repositório contendo o código desenvolvido no acompanhamento das aulas do curs
 - <a href="https://code.visualstudio.com/" target="_blank"><img src="https://img.shields.io/badge/CODE-TOOLS-5151d8?style=flat-square&logo=visual%20studio%20code" alt="vs code"></a>  
 
 ### Informações sobre o curso:
-- **Duração Total**: 43 horas de vídeo  
+- **Duração Total**: 43 horas de vídeo.  
 - **Carga Horária**: -  
 - **Principais tópicos abordados**: Vue JS, Vue Router, Vue Cli, Vuex , HTML, CSS, Bootstrap Vue.  
-- **Progresso**: :lock: 35%. O curso está paralisado.  
+- **Progresso**:  35%  
+- **Status**: :lock: O curso está SUSPENSO.  
 - **Link para o curso**: [Clique aqui](https://www.udemy.com/course/vue-js-completo/)
 
-### Minhas considerações:  ![Nota](https://img.shields.io/badge/Nota-0%2F0-green)
+### Minhas considerações:  ![Nota](https://img.shields.io/badge/NOTA-0%2F0-green)
 >  *O curso será avaliado ao final*
 
